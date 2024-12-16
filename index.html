@@ -6,7 +6,7 @@
         content="A Visual Interaction Representation for Robotic Grasping">
   <meta name="keywords" content="InterRep, Robotic Grasping">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InterRep: A Visual Interaction Representation for Robotic Grasping</title>
+  <title>TPGP: Temporal-Parametric Optimization with Deep Grasp Prior for Dexterous Motion Planning</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -66,7 +66,7 @@
           <a class="navbar-item" href="https://hypernerf.github.io">
             HyperNeRF
           </a>
-          <a class="navbar-item" href="https://cuiyu0627.github.io/interrep.github.io/">
+          <a class="navbar-item" href="https://lihaoming45/tpgp.github.io/">
             Nerfies
           </a>
           <a class="navbar-item" href="https://latentfusion.github.io">
@@ -88,10 +88,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">InterRep: A Visual Interaction Representation for Robotic Grasping</h1>
+          <h1 class="title is-1 publication-title">TPGP: Temporal-Parametric Optimization with Deep Grasp Prior for Dexterous Motion Planning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Yu Cui</a>,</span>
+              <a href="">Yu </a>,</span>
             <span class="author-block">
               <a href="https://perple-zju.github.io/">Qi Ye</a>,</span>
             <span class="author-block">
@@ -251,38 +251,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recently, pre-trained vision models have gained
-            significant attention to motor control, showcasing impressive
-            performance across diverse robotic learning tasks. While previous
-            works predominantly concentrate on the significance of
-            the pre-training phase, the equally important task of extracting
-            more effective representations based on existing pre-trained
-            visual models remains unexplored.
+            Grasping motion planning aims to find a feasible grasping trajectory in the configuration space given an input target grasp.
+            While optimizing grasp motion with two or three-fingered grippers has been well-studied,
+            the study on natural grasp motion planning with a dexterous
+            hand remains a very challenging problem due to the high dimensional working space. 
           </p>
           <p>
-            To better leverage the
-            representation capabilities of pre-trained models for robotic
-            grasping, we propose InterRep, a novel interaction representation
-            method that possesses not only the strengths of pre-trained
-            models, known for their robustness in noisy environments
-            and their proficiency in recognizing essential features, but
-            also the capacity of capturing dynamic interaction details and
-            local geometric features during the grasping process. Based on
-            the novel representation, we introduce a deep reinforcement
-            learning method to learn generalizable grasping policies. 
-          </p>
-          <p>
-            The
-            experimental results demonstrate that our proposed representation
-            outperforms the baselines in terms of both training speed
-            and generalization. For the generalized grasping tasks with
-            dexterous robotic hands, our method boasts a success rate
-            nearly 20% higher than methods using the global features of the
-            entire image from pre-trained models. In addition, our proposed
-            representation method demonstrates promising performance
-            when applied to a different robotic hand and task. It also
-            exhibits excellent performance on real robots with a success
-            rate of 70%.
+            In this work, we propose a novel temporal-parametric grasp prior (TPGP) optimization method 
+            to simplify the difficulty of grasping trajectory optimization for the dexterous hand while 
+            maintaining smooth and natural properties of the grasping motion. Specifically, we formulate 
+            the discrete trajectory parameters into a temporal-based parameterization, 
+            where the prior constraint provided by a hand poser network, is introduced to ensure that hand pose is natural and reasonable throughout the trajectory. 
+            Finally, we present a joint target optimization strategy to enhance the target pose for more feasible trajectories.
+            Extensive validations on two public datasets show that our method outperforms state-of-the-art methods regarding grasp motion on various metrics. 
           </p>
         </div>
       </div>
@@ -306,11 +287,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{cui2024interrep,
-  title={InterRep: A Visual Interaction Representation for Robotic Grasping},
-  author={Cui, Yu and Ye, Qi and Liu, Qingtao and Chen, Anjun and Li, Gaofeng and Chen, Jiming},
+    <pre><code>@inproceedings{li2024tpgp,
+  title={TPGP: Temporal-Parametric Optimization with Deep Grasp Prior for Dexterous Motion Planning},
+  author={Haoming Li, Qi Ye, Yuchi Hu, Qingtao Liu,  Shijian Jiang, Tao Zhou, \\ Xiang Li, Yang Zhou, Jiming Chen},
   booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
-  pages={6448--6454},
+  pages={18106--18112},
   year={2024},
   organization={IEEE}
 }</code></pre>
